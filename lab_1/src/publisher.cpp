@@ -46,13 +46,35 @@ int main(int argc, char **argv)
       ROS_INFO("To finish, write exit.");
 
       string new_color;
-      int new_number;
       cin >> new_color;
+
       if(new_color.find("exit") != string::npos)
         return 1;
-      cin >> new_number;
-      srv.request.color = new_color;
-      srv.request.number = new_number;
+      
+      argv[1] = &new_color[0];
+
+      if (cin.get() == '\n')
+      {
+        argc = 2;
+      }
+      else  
+      {
+        string new_number;
+        cin >> new_number;
+        argv[2] = &new_number[0];
+        argc = 3;        
+      }
+      
+      if (argc == 2)
+      {
+        srv.request.color = argv[1];
+        srv.request.number = 37;
+      }
+      else if (argc == 3)
+      {       
+        srv.request.color = argv[1];
+        srv.request.number = atoll(argv[2]);
+      }
     }
     else
     {

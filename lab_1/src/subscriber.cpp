@@ -33,7 +33,7 @@ bool game(lab_1::table::Request &req,
     is_win = true_color == player_color;
   }
   
-  // определение победы или поражения, когда введены цыет и число
+  // определение победы или поражения, когда введены цвет и число
   if (player_color == "green")
   {
     is_win = (true_number == 0) && (true_color == "green");
