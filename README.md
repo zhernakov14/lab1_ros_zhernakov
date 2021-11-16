@@ -1,12 +1,26 @@
-# lab_1_ros_zhernakov
+# lab1_ros_zhernakov
 Жернаков Андрей. Лабораторная №1.
 
+После сборки пакета необходимо выполнить команду:
+```
+source devel/setup.bash
+```
+
+Далее запускаем ROS:
+```
+roscore
+```
 Чтобы запустить сервер, введите:
 ```
-rosrun ros_lab1 casino
+rosrun lab1_ros load_params.launch
 ```
 Чтобы играть, введите в другом терминале:
 ```
-rosrun ros_lab1 player <цвет> <число>
+rosrun lab1_ros player <цвет> <число>
 ```
 Также можно делать ставку просто на цвет.
+
+Чтобы отслеживать сообщения в топик, введите:
+```
+rostopic echo casino_topic
+```
