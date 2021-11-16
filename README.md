@@ -12,7 +12,7 @@ roscore
 ```
 Чтобы запустить сервер, введите:
 ```
-rosrun lab1_ros load_params.launch
+roslaunch lab1_ros load_params.launch
 ```
 Чтобы играть, введите в другом терминале:
 ```
