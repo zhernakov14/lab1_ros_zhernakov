@@ -10,8 +10,8 @@ using namespace ros;
 Publisher g_publisher;
 Subscriber g_subscriber;
 
-bool game(lab_1::table::Request &req, 
-          lab_1::table::Response &res)
+bool game(lab1_ros::table::Request &req, 
+          lab1_ros::table::Response &res)
 {
   // задание выбора игрока
   string player_color = req.color;

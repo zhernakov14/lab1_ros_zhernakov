@@ -12,8 +12,8 @@ int main(int argc, char **argv)
   init(argc, argv, "casino_publisher");
 
   NodeHandle n;
-  ServiceClient client = n.serviceClient<lab_1::table>("table");
-  lab_1::table srv;
+  ServiceClient client = n.serviceClient<lab1_ros::table>("table");
+  lab1_ros::table srv;
 
   // проверка, пришел только цвет или цвет и число
   if (argc == 2)
