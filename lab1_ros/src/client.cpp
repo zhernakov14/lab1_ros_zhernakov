@@ -1,5 +1,5 @@
 #include "ros/ros.h"
-#include "lab_1/table.h"
+#include "lab1_ros/table.h"
 #include <stdlib.h>
 #include <iostream>
 #include <string>
